@@ -4,12 +4,12 @@ const Schedule = () => {
   return (
     <section id="events">
       <div className="header">
-        <h2 className="text-center mt-3 text-2xl mb-4 font-schibsted-grotesk">
+        <h2 className="text-center mt-10 text-2xl mb-8 font-schibsted-grotesk">
           <strong>Parish Schedule</strong>
         </h2>
       </div>
       <div className="grid md:grid-cols-3 gap-10 sm:grid-cols-2 grid-cols-2">
-        <div className="bg-amber-200 cursor-pointer mb-4 rounded-lg shadow-grey gap-4 relative p-4">
+        <div className="bg-amber-200 cursor-pointer mb-4 rounded-lg shadow-xl/100 gap-4 relative p-4">
           <div className="p-4">
             <div
               className="flex flex-row gap-4 items-center justify-center"
@@ -32,7 +32,7 @@ const Schedule = () => {
           </div>
         </div>
 
-        <div className="bg-blue-100 cursor-pointer mb-4 rounded-lg shadow-grey gap-4 relative p-4">
+        <div className="bg-blue-100 cursor-pointer mb-4 rounded-lg shadow-xl/100 gap-4 relative p-4">
           <div className="p-4">
             <div
               className="flex flex-row gap-4 items-center justify-center"
@@ -53,7 +53,7 @@ const Schedule = () => {
           </div>
         </div>
 
-        <div className="bg-emerald-200 cursor-pointer mb-4 rounded-lg shadow-grey gap-4 relative p-4">
+        <div className="bg-emerald-200 cursor-pointer mb-4 rounded-lg shadow-xl/100 gap-4 relative p-4">
           <div className="p-4">
             <div
               className="flex flex-row gap-4 items-center justify-center"
@@ -75,7 +75,7 @@ const Schedule = () => {
           </div>
         </div>
 
-        <div className="bg-red-200 cursor-pointer mb-4 rounded-lg shadow-grey gap-4 relative p-4">
+        <div className="bg-red-200 cursor-pointer mb-4 rounded-lg shadow-xl/100 gap-4 relative p-4">
           <div className="p-4">
             <div
               className="flex flex-row gap-4 items-center justify-center"
@@ -98,7 +98,7 @@ const Schedule = () => {
           </div>
         </div>
 
-        <div className="bg-lime-200 cursor-pointer mb-4 rounded-lg shadow-grey gap-4 relative p-4">
+        <div className="bg-lime-200 cursor-pointer mb-4 rounded-lg shadow-xl/100 gap-4 relative p-4">
           <div className="p-4">
             <div
               className="flex flex-row gap-4 items-center justify-center"
@@ -120,7 +120,7 @@ const Schedule = () => {
           </div>
         </div>
 
-        <div className="bg-yellow-200 cursor-pointer mb-4 rounded-lg shadow-grey gap-4 relative p-4">
+        <div className="bg-yellow-200 cursor-pointer mb-4 rounded-lg shadow-xl/100 gap-4 relative p-4">
           <div className="p-4">
             <div
               className="flex flex-row gap-4 items-center justify-center"

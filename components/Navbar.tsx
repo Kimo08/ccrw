@@ -16,11 +16,21 @@ const Navbar = () => {
         </Link>
 
         <ul>
-          <Link href="/">Home</Link>
-          <Link href="/">About</Link>
-          <Link href="/">Mass</Link>
-          <Link href="/">Photo Gallery</Link>
-          <Link href="/">Contact us</Link>
+          <Link href="/" className="text-black hover:text-white">
+            Home
+          </Link>
+          <Link href="/about" className="text-black hover:text-white">
+            About
+          </Link>
+          <Link href="/schedule" className="text-black hover:text-white">
+            Mass
+          </Link>
+          <Link href="/" className="text-black hover:text-white">
+            Photo Gallery
+          </Link>
+          <Link href="/contact" className="text-black hover:text-white">
+            Contact us
+          </Link>
         </ul>
       </nav>
     </header>

@@ -1,5 +1,5 @@
-import About from "@/components/About";
-import Schedule from "@/components/Schedule";
+import About from "@/app/about/page";
+import Schedule from "@/app/schedule/page";
 
 const page = () => {
   return (
