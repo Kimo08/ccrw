@@ -119,35 +119,56 @@
   }
 
   main {
-    @apply mx-auto container flex flex-col sm:px-10 px-5 py-10;
+    @apply w-full flex flex-col relative z-10;
   }
 
   h1 {
-    @apply text-gradient text-3xl font-black font-semibold max-sm:text-2xl;
+    @apply text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 leading-tight max-sm:text-2xl;
+  }
+
+  h2 {
+    @apply text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 leading-snug;
   }
 
   h3 {
-    @apply font-schibsted-grotesk text-2xl font-bold;
+    @apply font-schibsted-grotesk text-xl sm:text-2xl font-bold text-gray-800;
+  }
+
+  p {
+    @apply text-gray-900 text-base sm:text-lg leading-relaxed;
   }
 
   ul {
-    @apply list-disc list-inside;
+    @apply list-none space-y-2;
+  }
+
+  li {
+    @apply text-gray-700 text-base sm:text-lg flex items-start gap-2;
+  }
+
+  li::before {
+    content: "✦";
+    @apply text-blue-500 font-bold mr-2 flex-shrink-0 mt-0.5;
+  }
+
+  section {
+    @apply relative z-10;
   }
 }
 
 @layer components {
   header {
-    @apply glass sticky w-full top-0 z-50;
+    @apply sticky w-full top-0 z-50 bg-white/95 backdrop-blur-lg shadow-lg border-b border-blue-100;
 
     nav {
-      @apply flex w-full bg-gray-400 flex-row justify-between mt-auto sm:px-10 px-5 py-4;
+      @apply flex w-full flex-row justify-between items-center px-4 sm:px-8 lg:px-10 py-4 sm:py-5;
     }
 
     .logo {
-      @apply flex flex-row items-center gap-2;
+      @apply flex flex-row items-center gap-2 sm:gap-3;
 
       p {
-        @apply text-xl font-bold italic;
+        @apply text-base sm:text-lg font-bold text-gray-900;
       }
     }
 

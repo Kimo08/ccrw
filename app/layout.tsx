@@ -28,14 +28,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${schibstedGrotesk.variable} ${martianMono.variable} min-h-screen antialiased`}
+        className={`${schibstedGrotesk.variable} ${martianMono.variable} min-h-screen antialiased bg-gradient-to-br from-slate-50 via-white to-blue-50`}
       >
-        {/* <Navbar /> */}
-        <HamburgerMenu />
-        <div className="fixed inset-0 top-0 z-[-1]">
+        <div className="fixed inset-0 top-0 z-[-1] opacity-40">
           <LightRays
             raysOrigin="top-center-offset"
-            raysColor="#5dfeca"
+            raysColor="#3b82f6"
             raysSpeed={0.5}
             lightSpread={0.9}
             rayLength={4}
@@ -45,7 +43,8 @@ export default function RootLayout({
             distortion={0.01}
           />
         </div>
-        <main>{children}</main>
+        <HamburgerMenu />
+        <main className="flex flex-col min-h-screen flex-1">{children}</main>
         <Footer />
       </body>
     </html>

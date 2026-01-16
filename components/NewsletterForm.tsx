@@ -39,35 +39,37 @@ const NewsletterForm: React.FC = () => {
   };
 
   return (
-    <div className=" rounded-lg shadow-md mb-1">
-      <h4 className=" font-bold mb-2 items-center">
+    <div>
+      <h4 className="text-white font-bold text-lg mb-2 pb-2 border-b border-blue-300">
         Subscribe to Our Newsletter
       </h4>
-      <h4 className="mb-4 text-sm text-white">
-        Subscribe to our newsletter to stay informed about upcoming events,
-        inspiring messages and the latest news from our church community
-      </h4>
-      <form onSubmit={handleSubmit} className="flex flex-row ">
+      <p className="mb-4 text-sm text-blue-100 leading-relaxed">
+        Stay informed about upcoming events, inspiring messages and the latest
+        news from our church community
+      </p>
+      <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-2">
         <input
           type="email"
           placeholder="Enter your email"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
-          className="p-2 border border-gray-300 rounded focus:ring-blue-500 focus:border-blue-500"
+          className="flex-1 px-4 py-2 text-sm sm:text-base border border-blue-200 rounded-md focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
         />
         <button
           type="submit"
           disabled={isSubmitting || !email}
-          className="p-2 bg-blue-600 text-white font-semibold rounded hover:bg-blue-700 disabled:opacity-50 transition duration-150 ease-in-out"
+          className="px-4 py-2 bg-blue-600 text-white font-semibold rounded-md hover:bg-blue-700 active:bg-blue-800 disabled:opacity-50 transition-all duration-200 whitespace-nowrap"
         >
           {isSubmitting ? "Subscribing..." : "Subscribe"}
         </button>
       </form>
       {message && (
         <p
-          className={`mt-3 text-sm ${
-            message.includes("Success") ? "text-green-600" : "text-red-600"
+          className={`mt-3 text-xs sm:text-sm font-medium ${
+            message.includes("Success")
+              ? "text-green-600 bg-green-50 p-2 rounded"
+              : "text-red-600 bg-red-50 p-2 rounded"
           }`}
         >
           {message}
