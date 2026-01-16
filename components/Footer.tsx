@@ -5,7 +5,7 @@ import QuickLinks from "./QuickLinks";
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-800 text-white mt-auto py-6">
+    <footer className="bg-gray-800 w-full text-white mt-auto py-4">
       <div className=" container mx-auto px-4 flex flex-col gap-5">
         <div className="flex flex-col md:flex-row gap-2  justify-between">
           <Link href="/" className="flex flex-row items-center italic gap-2">

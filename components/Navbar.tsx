@@ -5,11 +5,15 @@ import Link from "next/link";
 import { useState } from "react";
 
 const HamburgerMenu = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
+  const navLinks = [
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+    { name: "Mass", href: "/schedule" },
+    { name: "Gallery", href: "/" },
+    { name: "Contact", href: "/contact" },
+  ];
 
   return (
     <header>
@@ -23,41 +27,40 @@ const HamburgerMenu = () => {
           />
           <p className="text-4px">Catholic Church Of Resurrection</p>
         </Link>
-        {/* Mobile menu button, hidden on large screens */}
-        <button
-          className="lg:hidden text-white"
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-          aria-expanded={isOpen}
-        >
-          {/* Replace with your icon component or div/span elements */}
-          {isOpen ? "X" : "☰"}
-        </button>
 
-        {/* Menu links (desktop and mobile) */}
-        <div
-          className={`lg:flex items-center ${
-            isOpen ? "block" : "hidden"
-          } absolute lg:static top-16 left-0 w-full lg:w-auto bg-cyan-600 lg:bg-transparent p-4 lg:p-0`}
-        >
-          <ul>
-            <Link href="/" className="text-black hover:text-white">
-              Home
-            </Link>
-            <Link href="/about" className="text-black hover:text-white">
-              About
-            </Link>
-            <Link href="/schedule" className="text-black hover:text-white">
-              Mass
-            </Link>
-            <Link href="/" className="text-black hover:text-white">
-              Photo Gallery
-            </Link>
-            <Link href="/contact" className="text-black hover:text-white">
-              Contact us
-            </Link>
-          </ul>
+        {/* Desktop Links (Visible on large screens) */}
+        <div className="hidden md:flex space-x-4">
+          {navLinks.map((link) => (
+            <a key={link.name} href={link.href} className="hover:text-gray-300">
+              {link.name}
+            </a>
+          ))}
         </div>
+
+        {/* Mobile Hamburger Icon (Visible on small screens) */}
+        <div className="md:hidden">
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="text-white focus:outline-none"
+            aria-label="Toggle menu"
+          >
+            {/* You can use an icon library or simple text for the icon */}☰
+          </button>
+        </div>
+        {isMenuOpen && (
+          <div className="absolute right-0 mt-2 w-48 bg-white rounded-md shadow-lg py-1 z-10">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="block px-4 py-2 text-sm text-gray-800 hover:bg-gray-100"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                {link.name}
+              </a>
+            ))}
+          </div>
+        )}
       </nav>
     </header>
   );

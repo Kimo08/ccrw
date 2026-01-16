@@ -8,11 +8,11 @@ const Schedule = () => {
           <strong>Parish Schedule</strong>
         </h2>
       </div>
-      <div className="grid md:grid-cols-3 gap-10 sm:grid-cols-2 grid-cols-2">
+      <div className="grid gap-10 sm:grid-cols-1 md:grid-cols-3">
         <div className="bg-amber-200 cursor-pointer mb-4 rounded-lg shadow-xl/100 gap-4 relative p-4">
           <div className="p-4">
             <div
-              className="flex flex-row gap-4 items-center justify-center"
+              className="flex flex-row gap-2 md:flex-col items-center justify-center"
               style={{
                 borderBottom: "1px solid black",
               }}
@@ -24,7 +24,7 @@ const Schedule = () => {
                 height={90}
                 className="mb-2"
               />
-              <div className="text-black my-2 font-bold">Mass</div>
+              <div className="text-black my-2 sm:text-sm font-bold">Mass</div>
             </div>
 
             <li>SUNDAYS: 7:00am</li>
@@ -35,7 +35,7 @@ const Schedule = () => {
         <div className="bg-blue-100 cursor-pointer mb-4 rounded-lg shadow-xl/100 gap-4 relative p-4">
           <div className="p-4">
             <div
-              className="flex flex-row gap-4 items-center justify-center"
+              className="flex flex-row gap-2 md:flex-col items-center justify-center"
               style={{
                 borderBottom: "1px solid black",
               }}
@@ -43,11 +43,13 @@ const Schedule = () => {
               <Image
                 src="/icons/confessional.jpeg"
                 alt="mass"
-                width={90}
+                width={80}
                 height={90}
                 className="mb-2"
               />
-              <div className="text-black my-2 font-bold">Confession</div>
+              <div className="text-black my-2 sm:text-sm text-sm font-bold">
+                Confession
+              </div>
             </div>
             <li>SATURDAYS: After 7:00am mass</li>
           </div>
@@ -56,7 +58,7 @@ const Schedule = () => {
         <div className="bg-emerald-200 cursor-pointer mb-4 rounded-lg shadow-xl/100 gap-4 relative p-4">
           <div className="p-4">
             <div
-              className="flex flex-row gap-4 items-center justify-center"
+              className="flex flex-row gap-2 md:flex-col items-center justify-center"
               style={{
                 borderBottom: "1px solid black",
               }}
@@ -64,11 +66,13 @@ const Schedule = () => {
               <Image
                 src="/icons/baptism.jpeg"
                 alt="mass"
-                width={80}
-                height={80}
+                width={70}
+                height={60}
                 className="mb-2"
               />
-              <div className="text-black my-2 font-bold">Baptism</div>
+              <div className="text-black my-2 sm:text-sm text-sm font-bold">
+                Baptism
+              </div>
             </div>
             <li>Bookings are done at the parish office</li>
             <li>Every 1st Saturday</li>
@@ -78,7 +82,7 @@ const Schedule = () => {
         <div className="bg-red-200 cursor-pointer mb-4 rounded-lg shadow-xl/100 gap-4 relative p-4">
           <div className="p-4">
             <div
-              className="flex flex-row gap-4 items-center justify-center"
+              className="flex flex-row gap-2 md:flex-col items-center justify-center"
               style={{
                 borderBottom: "1px solid black",
               }}
@@ -86,11 +90,11 @@ const Schedule = () => {
               <Image
                 src="/icons/St. Joseph Marello.jpg"
                 alt="mass"
-                width={60}
-                height={60}
+                width={50}
+                height={40}
                 className="mb-2"
               />
-              <div className="text-black my-2 font-bold">
+              <div className="text-black my-2 sm:text-sm text-sm font-bold">
                 Devotion to St.Joseph
               </div>
             </div>
@@ -101,7 +105,7 @@ const Schedule = () => {
         <div className="bg-lime-200 cursor-pointer mb-4 rounded-lg shadow-xl/100 gap-4 relative p-4">
           <div className="p-4">
             <div
-              className="flex flex-row gap-4 items-center justify-center"
+              className="flex flex-row gap-2 md:flex-col items-center justify-center"
               style={{
                 borderBottom: "1px solid black",
               }}
@@ -113,7 +117,9 @@ const Schedule = () => {
                 height={70}
                 className="mb-2"
               />
-              <div className="text-black my-2 font-bold">Office Hours</div>
+              <div className="text-black my-2 sm:text-sm text-sm font-bold">
+                Office Hours
+              </div>
             </div>
 
             <li>TUESDAY - FRIDAY : 9:00am - 1:00pm</li>
@@ -123,7 +129,7 @@ const Schedule = () => {
         <div className="bg-yellow-200 cursor-pointer mb-4 rounded-lg shadow-xl/100 gap-4 relative p-4">
           <div className="p-4">
             <div
-              className="flex flex-row gap-4 items-center justify-center"
+              className="flex flex-row gap-2 md:flex-col items-center justify-center"
               style={{
                 borderBottom: "1px solid black",
               }}
@@ -135,7 +141,9 @@ const Schedule = () => {
                 height={90}
                 className="mb-2"
               />
-              <div className="text-black my-2 font-bold">Adoration</div>
+              <div className="text-black sm:text-sm text-sm my-2 font-bold">
+                Adoration
+              </div>
             </div>
 
             <li>SUNDAYS: 5:00pm</li>
