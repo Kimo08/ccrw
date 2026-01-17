@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const QuickLinks = () => {
   const links = [
-    { name: "About", href: "/about" },
+    { name: "About", href: "/" },
     { name: "Contact", href: "/contact" },
     { name: "Schedule", href: "/schedule" },
   ];

@@ -9,7 +9,7 @@ const HamburgerMenu = () => {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "About", href: "/about" },
+    { name: "About", href: "/" },
     { name: "Mass", href: "/schedule" },
     { name: "Gallery", href: "/" },
     { name: "Contact", href: "/contact" },
@@ -32,7 +32,8 @@ const HamburgerMenu = () => {
               className="w-full h-full object-cover rounded"
             />
           </div>
-          <div className="hidden sm:block">
+          z
+          <div className=" sm:block">
             <p className="text-white font-bold text-sm lg:text-base leading-tight">
               Catholic Church
             </p>

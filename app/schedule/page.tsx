@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 const Schedule = () => {
   const scheduleItems = [
@@ -8,6 +9,10 @@ const Schedule = () => {
       color: "bg-amber-200",
       details: ["SUNDAYS: 7:00am", "WEEKDAYS: MON - FRI: 6:00pm, SAT: 7:00am"],
       imageSize: { width: 90, height: 90 },
+      showButton: true,
+      buttonText: "View Today's Reading",
+      link: "/readings",
+      isExternal: false,
     },
     {
       title: "Confession",
@@ -15,6 +20,7 @@ const Schedule = () => {
       color: "bg-blue-100",
       details: ["SATURDAYS: After 7:00am mass"],
       imageSize: { width: 80, height: 90 },
+      showButton: false,
     },
     {
       title: "Baptism",
@@ -22,6 +28,10 @@ const Schedule = () => {
       color: "bg-emerald-200",
       details: ["Bookings are done at the parish office", "Every 1st Saturday"],
       imageSize: { width: 70, height: 60 },
+      showButton: true,
+      buttonText: "Book Now!",
+      link: "/contact",
+      isExternal: false,
     },
     {
       title: "Devotion to St.Joseph",
@@ -29,6 +39,7 @@ const Schedule = () => {
       color: "bg-red-200",
       details: ["Every Wednesdays"],
       imageSize: { width: 50, height: 40 },
+      showButton: false,
     },
     {
       title: "Office Hours",
@@ -36,6 +47,10 @@ const Schedule = () => {
       color: "bg-lime-200",
       details: ["TUESDAY - FRIDAY : 9:00am - 1:00pm"],
       imageSize: { width: 70, height: 70 },
+      showButton: true,
+      buttonText: "Visit Us Today",
+      link: "/contact",
+      isExternal: false,
     },
     {
       title: "Adoration",
@@ -43,6 +58,7 @@ const Schedule = () => {
       color: "bg-yellow-200",
       details: ["SUNDAYS: 5:00pm"],
       imageSize: { width: 90, height: 90 },
+      showButton: false,
     },
   ];
 
@@ -96,6 +112,29 @@ const Schedule = () => {
                     </li>
                   ))}
                 </ul>
+
+                {/* Button Section */}
+                {item.showButton && (
+                  <div className="mt-6 sm:mt-8">
+                    {item.isExternal && item.link ? (
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 sm:py-3 px-4 rounded-lg transition-colors duration-300">
+                          {item.buttonText}
+                        </button>
+                      </a>
+                    ) : !item.isExternal && item.link ? (
+                      <Link href={item.link}>
+                        <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 sm:py-3 px-4 rounded-lg transition-colors duration-300">
+                          {item.buttonText}
+                        </button>
+                      </Link>
+                    ) : null}
+                  </div>
+                )}
               </div>
             </div>
           ))}

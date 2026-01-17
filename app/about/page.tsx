@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <div className="w-full min-h-screen bg-gray-900 flex items-center justify-center px-4 sm:px-6 lg:px-8">
+    <div className="w-full min-h-screen bg-transparent flex items-center justify-center px-4 sm:px-6 lg:px-8">
       <div
         className="w-full rounded-lg overflow-hidden shadow-2xl min-h-96 sm:min-h-screen lg:min-h-[600px] flex items-center justify-center"
         style={{
