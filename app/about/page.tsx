@@ -4,7 +4,7 @@ const About = () => {
       <div
         className="w-full rounded-lg overflow-hidden shadow-2xl min-h-96 sm:min-h-screen lg:min-h-[600px] flex items-center justify-center"
         style={{
-          backgroundImage: `linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)), url(${"/icons/gallery{2}.jpeg"})`,
+          backgroundImage: `linear-gradient( 180deg, rgba(8,8,8,0.9), rgba(8,8,8,0.7)), url(${"/icons/gallery{2}.jpeg"})`,
           backgroundSize: "cover",
           backgroundRepeat: "no-repeat",
           backgroundPosition: "center",

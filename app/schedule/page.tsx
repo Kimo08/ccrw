@@ -70,9 +70,9 @@ const Schedule = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800">
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-800">
             Parish Schedule
-          </h2>
+          </h1>
           <div className="w-16 sm:w-20 h-1 bg-blue-600 mx-auto mt-4 rounded"></div>
         </div>
 

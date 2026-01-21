@@ -66,10 +66,10 @@ const Page = () => {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-4">
             Get In Touch
           </h1>
-          <h1 className="font-black text-gray-900 text-lg sm:text-xl max-w-2xl mx-auto">
+          <h4 className=" text-gray-900 text-lg sm:text-xl max-w-2xl italic mx-auto">
             We&apos;d love to hear from you. Send us a message and we&apos;ll
             respond as soon as possible.
-          </h1>
+          </h4>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 mb-12 lg:mb-16">
